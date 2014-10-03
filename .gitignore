@@ -2,6 +2,6 @@
 composer.phar
 composer.lock
 .env.*
-.sass-chache
+/.sass-chache
 .DS_Store
 Thumbs.db
