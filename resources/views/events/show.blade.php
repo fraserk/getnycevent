@@ -15,7 +15,7 @@
 				<div class="large-6 columns">
 					<h3><strong>{{$data->name}}</strong></h3>
 				
-					<p>{{ nl2br($data->detail)}}</p>
+					<p>{!! nl2br($data->detail)!!}</p>
 					
 					<hr />
 
