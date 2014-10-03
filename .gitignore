@@ -2,6 +2,7 @@
 composer.phar
 composer.lock
 .env.*
-/sass-chache
+.sass-cache
+.sass-cache/*
 .DS_Store
 Thumbs.db
