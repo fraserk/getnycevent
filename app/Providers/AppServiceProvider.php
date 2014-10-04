@@ -26,6 +26,7 @@ class AppServiceProvider extends ServiceProvider {
 		// or service providers to keep the code more focused and granular.
 
 		//
+		$this->app->bind('App\repos\EventsRepositoryInterface','App\repos\EventsRepository');
 	}
 
 }

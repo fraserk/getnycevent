@@ -7,14 +7,16 @@ use App\Evnt;
 use App\User;
 use App\Venue;
 use App\Category;
-use \Input;
+//use new events Repository
+use App\repos\EventsRepository as event;
 
 
 class EvntController extends Controller {
 
-	public function __construct( Authenticator $auth){
+	public function __construct( Authenticator $auth, event $event){
 		$this->beforefilter('auth',['except'=>['index','show','category']]);
 		$this->user = $auth;
+		$this->event = $event;
 		
 	}
 	/**
@@ -25,13 +27,9 @@ class EvntController extends Controller {
 	public function index()
 
 	{
-		$search = \Request::get('q');
+		
 		$categories = Category::orderBy('categoryName','asc')->get();
-		$data = $search ? 
-				Evnt::Search($search)->AllEvents()->paginate('20') 
-				: $data = Evnt::AllEvents()->orderBy('when')->paginate('20');
-
-		//dd($data->toarray());
+		$data = $this->event->getActiveEvents();
 		return view('events.index',compact('data','categories'));
 	}
 
@@ -56,40 +54,9 @@ class EvntController extends Controller {
 	 */
 	public function store(CreateEventRequest $request)
 	{
-		//dd($this->user->id());
-		//$dt = \Carbon::create($request->when);
-		//dd($request->when);
-
-
-
-		$event = new Evnt;
-		$event->name = 	$request->name;
-		$event->user_id = $this->user->id();
-		$event->when = $request->when;
-		$event->end  = $request->end;
-		$event->cover = $request->cover;
-		$event->info = $request->info;
-		$event->detail = $request->detail;
-		$event->slug = \Str::slug($request->name);
-		$event->category_id = $request->category_id;
-
-		if(\Input::hasfile('flyer')){
-			$imgwidth = getimagesize(\Input::file('flyer'));
-            $extension = \Input::file('flyer')->getClientOriginalExtension();
-            $filename = Str_random(8) .'.' . $extension;
-
-            $event->flyer = $filename;
-            $destinationpath = 'uploads/'.$this->user->id();
-            \Input::file('flyer')->move($destinationpath,$filename);
-
-            \Cloudy::upload($destinationpath .'/' .$filename,$filename);  //send photo to cloudy
-            \File::deletedirectory($destinationpath); // temp folder
-		}
-
-
-		$user_id = $this->user->id();
-		$user = Venue::find($request->venue_id)->evnts()->save($event);
-		return \Redirect::route('show.event',[$user->slug])->with('message','Event posted..yayyyyy.');
+		$user = $this->user;
+		$data = $this->event->storeEvent($request, $user);		
+		return \Redirect::route('show.event',[$data->slug])->with('message','Event posted..yayyyyy.');
 		
 	}
 
@@ -101,8 +68,7 @@ class EvntController extends Controller {
 	 */
 	public function show($slug)
 	{
-		$data = Evnt::whereSlug($slug)->firstorfail();
-
+		$data = $this->event->getEventBySlug($slug);
 		return View('events.show',compact('data'));
 	}
 
@@ -130,39 +96,10 @@ class EvntController extends Controller {
 	 */
 	public function update(CreateEventRequest $request, $slug)
 	{
-		//
-		$event = Evnt::whereSlug($slug)->firstorfail();
-		$event->name = 	$request->name;
-		$event->when = $request->when;
-		$event->end  = $request->end;
-		$event->cover = $request->cover;
-		$event->info = $request->info;
-		$event->detail = $request->detail;
-		$event->slug = \Str::slug($request->name);
-		$event->category_id = $request->category_id;
-
-		if(\Input::hasfile('flyer')){
-			$imgwidth = getimagesize(\Input::file('flyer'));
-            $extension = \Input::file('flyer')->getClientOriginalExtension();
-            $filename = Str_random(8) .'.' . $extension;
-
-            $event->flyer = $filename;
-            $destinationpath = 'uploads/'.$this->user->id();
-            \Input::file('flyer')->move($destinationpath,$filename);
-
-            \Cloudy::upload($destinationpath .'/' .$filename,$filename);  //send photo to cloudy
-            \File::deletedirectory($destinationpath); // temp folder
-		}
-
-
-		$user = Venue::find($request->venue_id)->evnts()->save($event);
-		
-		return \Redirect::route('show.event',[$user->slug])->with('message','Event Updated..yayyyyy.');
-
-
+		//update event
+		$data = $this->event->updateEvent($request,$slug);		
+		return \Redirect::route('show.event',[$data->slug])->with('message','Event Updated..yayyyyy.');
 	}
-
-
 
 	/**
 	 * Remove the specified resource from storage.
@@ -173,24 +110,20 @@ class EvntController extends Controller {
 	public function destroy($slug)
 	{
 		// softdelete
-		$event = Evnt::whereSlug($slug)->firstorfail();
-		$event->delete();
+		$this->event->deleteEvent($slug);
 		return \Redirect::route('dashboard')->with('message','Event deleted');
 	}
 
 		public function restore($slug)
 	{
 		//
-
-		$event = Evnt::withTrashed()->whereSLug($id)->firstOrFail();
-		$event->restore();
+		$this->event->restoreEvent($slug);
 		return \Redirect::route('dashboard')->with('message','Event restored');
 	}
-
+	//mark all event as expired
 	public function expire()
 	{
-		$expire =  Evnt::where('when','<', \Carbon::now())->update(['expire'=> true]);
-		return $expire;
+		 return $this->event->expireEvent();
 	}
 
 	public function category($slug)
