@@ -39,7 +39,7 @@ use App\Venue;
             $filename = Str_random(8) .'.' . $extension;
 
             $event->flyer = $filename;
-            $destinationpath = 'uploads/'.$this->user->id();
+            $destinationpath = 'uploads/'.$user->id();
             \Input::file('flyer')->move($destinationpath,$filename);
 
             \Cloudy::upload($destinationpath .'/' .$filename,$filename);  //send photo to cloudy
@@ -70,7 +70,7 @@ use App\Venue;
 			            $filename = Str_random(8) .'.' . $extension;
 
 			            $event->flyer = $filename;
-			            $destinationpath = 'uploads/'.$this->user->id();
+			            $destinationpath = 'uploads/'.$user->id();
 			            \Input::file('flyer')->move($destinationpath,$filename);
 
 			            \Cloudy::upload($destinationpath .'/' .$filename,$filename);  //send photo to cloudy
