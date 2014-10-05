@@ -90,7 +90,7 @@ use App\Venue;
 
 		//expire event..
 		public function expireEvent(){
-			return Evnt::where('when','<', \Carbon::now())->update(['expire'=> true]);
+			return Evnt::where('end','<', \Carbon::now())->update(['expire'=> true]);
 
 		}
 
