@@ -48,7 +48,7 @@
                 <div class="large-2 small-12 medium-2 columns poster ">
                     <a href="{!!URL::route('show.event',[$event->slug])!!}" alt="getnycevent - {!!$event->name !!}" title="{!!$event->name!!}">
                     @if($event->flyer)     
-                        <img itemprop="photo" src="{!!Cloudy::show($event->flyer, array('width' => 240, 'height' => 240, 'crop' => 'fill', 'radius' => 0))!!}"> 
+                        <img itemprop="image" src="{!!Cloudy::show($event->flyer, array('width' => 240, 'height' => 240, 'crop' => 'fill', 'radius' => 0))!!}"> 
                          @else
                          {!!HTML::image('assets/images/noimage.png')!!}
                         
@@ -61,7 +61,7 @@
                 <div class="large-8 medium-8 columns eventcontent">
                     <div class="row eventheader">
                         <div class="small-12 columns">
-                 <h5 class="subheader">{!! HTML::linkroute('show.event',$event->name,[$event->slug],['itemprop'=>'url'])!!} </h5> 
+                 <h5 class="subheader" itemprop="summary">{!! HTML::linkroute('show.event',$event->name,[$event->slug],['itemprop'=>'url'])!!} </h5> 
                             </div>
                         </div>
               

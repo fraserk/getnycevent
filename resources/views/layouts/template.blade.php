@@ -69,8 +69,8 @@
         <div class="row">
             <div class="larger-12 columns">
                <ul class="no-bullet">
-                   <h6 class="subheader">Follow us on:</h6>
-                  <a href="http://twitter.com/getnycevent">  <i class="fi-social-twitter large"></i></a>
+                  <li><a href="http://twitter.com/getnycevent">  <i class="fi-social-twitter large"></i></a></li>
+                  <li><a href="https://plus.google.com/108209078557449361832" rel="publisher">Visit us on Google+</a></li>
                </ul>
             </div>
         </div>
