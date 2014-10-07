@@ -20,7 +20,7 @@ class DashboardController extends Controller {
 	public function index()
 	{
 		$current_user = $this->user->id();
-		$data = User::find($current_user)->evnts()->paginate('20');
+		$data = User::find($current_user)->evnts()->orderBy('id','desc')->paginate('20');
 		//dd($data->toarray());
 		return view('dashboard.index',compact('data'));
 	}
