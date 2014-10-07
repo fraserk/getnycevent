@@ -5,7 +5,7 @@
 			<div class="row">	
 					<div class="small-12 columns panel callout">
 						<h4 class="subheader">Active Events</h4>
-						<small>You active upcomming events...</small>
+						<small>You active upcomming events.</small>
 						<hr />
 						<table role="grid">
 						  <thead>..
