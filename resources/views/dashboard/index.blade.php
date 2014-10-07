@@ -8,7 +8,7 @@
 						<small>You active upcomming events.</small>
 						<hr />
 						<table role="grid">
-						  <thead>
+						  <thead>..
 						    <tr>
 						      <th width="200">Event name</th>
 						      <th>Event Venue</th>
