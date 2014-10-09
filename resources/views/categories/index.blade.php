@@ -67,7 +67,7 @@
                 <div class="large-8 medium-8 columns eventcontent">
                     <div class="row eventheader">
                         <div class="small-12 columns">
-                 <h5 class="subheader">{!! HTML::linkroute('show.event',$event->name,[$event->slug],['itemprop'=>'url'])!!} </h5> 
+                 <h5 class="subheader" itemprop="summary">{!! HTML::linkroute('show.event',$event->name,[$event->slug],['itemprop'=>'url'])!!} </h5> 
                             </div>
                         </div>
               
