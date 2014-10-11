@@ -4,10 +4,11 @@
 
 		
 			<div class="row">
-				<div class="large-6 columns large-centered panel callout">
-					<h4>Contact Us </h4>
-					<small>Have a question or comment.  Please send us a note..</small>
-					<hr />
+				<div class="large-6 columns large-centered">
+					<div class="custom_head_panel">
+						<h4>Contact Us.</h4>
+					</div>
+					<div class="panel callout">
 					  @if ($errors->any())
        
             {!! implode('', $errors->all('<div data-alert class="alert-box warning">:message</div>')) !!}
@@ -34,7 +35,7 @@
 
 			{!!Form::close()!!}
 				</div>
-			
+			</div>
 
 
 

@@ -2,9 +2,13 @@
 	@section('content')
 		<section class='content'>
 			<div class='row'>
-				<div class="small-6 columns small-centered panel callout">
+				<div class="small-6 columns small-centered ">
+					<div class="custom_head_panel">
 						<h4>Login</h4>
-						<hr />
+					</div>
+					<div class="panel callout">
+
+						
 						@include('partials.errors')
 						{!!Form::open()!!}
 							{!!Form::label('email','Email Address.')!!}
@@ -19,6 +23,7 @@
 
 
 						{!!Form::close()!!}
+					</div>
 				</div>
 			</div>
 

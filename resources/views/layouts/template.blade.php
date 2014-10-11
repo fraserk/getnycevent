@@ -2,14 +2,15 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    
+
+            <title>GetNYCevents - @yield('title','Whats happening this weekend?')</title>
+            <meta name = "description" content="@yield('description', 'Get NYC Events, get infomation about local events in New York.  Find out whats happen this weekend.')"> 
+        <link href="http://fonts.googleapis.com/css?family=Josefin+Sans|Montserrat|Josefin+Sans|Medula+One|Open+Sans|Roboto"rel="stylesheet" type="text/css">
         {!!HTML::style('/assets/style/normalize.css')!!}
         {!!HTML::style('/assets/style/foundation.css')!!}
         {!!HTML::style('/assets/style/jquery.datetimepicker.css')!!}
         {!!HTML::style('/assets/foundation-icons/foundation-icons.css')!!}    
-        <link href="http://fonts.googleapis.com/css?family=Josefin+Sans|Montserrat|Josefin+Sans|Medula+One|Open+Sans"rel="stylesheet" type="text/css">
-            <title>GetNYCevents - @yield('title','Whats happening this weekend?')</title>
-            <meta name = "description" content="@yield('description', 'Get NYC Events, get infomation about local events in New York.  Find out whats happen this weekend.')">
+
 </head>
 
 <body>

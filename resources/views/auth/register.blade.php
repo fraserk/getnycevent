@@ -2,9 +2,11 @@
 	@section('content')
 		<section class='content'>
 			<div class='row'>
-				<div class="small-6 columns small-centered panel callout">
+				<div class="small-6 columns small-centered ">
+						<div class="custom_head_panel">
 						<h4>Register</h4>
-						<hr />
+					</div>
+					<div class="panel callout">
 						@if($errors->any)
 							<ul class="no-bullet alert">
 							@foreach($errors->all() as $error)
@@ -27,6 +29,7 @@
 
 
 						{!!Form::close()!!}
+					</div>
 				</div>
 			</div>
 
