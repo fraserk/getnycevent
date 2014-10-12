@@ -1,7 +1,5 @@
-						@if($errors->any)
-							<ul class="no-bullet alert">
-							@foreach($errors->all() as $error)
-								<li>{!!$error!!}</li>
-							@endforeach
-							<ul>
-						@endif
+			@if ($errors->any())
+       
+            {!! implode('', $errors->all('<div data-alert class="alert-box warning">:message</div>')) !!}
+        
+    		@endif

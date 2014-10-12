@@ -12,7 +12,7 @@
 
 			<div class="row detailBG">
 				<!-- left column -->
-				<div class="large-6 columns">
+				<div class="large-6 medium-5 columns">
 					<h3><strong>{{$data->name}}</strong></h3>
 				
 					<p>{!! nl2br($data->detail)!!}</p>
@@ -24,7 +24,7 @@
 						
 					
 				<!-- Right column -->
-				<div class="large-5 columns">
+				<div class="large-5 medium-5 columns">
 					<!-- nested columns -->
 					<div class="row">
 						

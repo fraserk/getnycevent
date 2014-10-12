@@ -7,13 +7,7 @@
 						<h4>Register</h4>
 					</div>
 					<div class="panel callout">
-						@if($errors->any)
-							<ul class="no-bullet alert">
-							@foreach($errors->all() as $error)
-								<li>{!!$error!!}</li>
-							@endforeach
-							<ul>
-						@endif
+						@include('partials.errors')
 						{!!Form::open()!!}
 							{!!Form::label('email','Email Address.')!!}
 							{!!Form::email('email')!!}
