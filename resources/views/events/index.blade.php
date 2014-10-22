@@ -6,6 +6,11 @@
 
   
 @include('partials.hero')
+
+<section>
+
+@include('partials.newsletter')
+</section>
  
 <section class="content eventListing">
         <div class="row upcomming">
