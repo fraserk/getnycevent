@@ -18,7 +18,11 @@
 					<p>{!! nl2br($data->detail)!!}</p>
 					
 					<hr />
-
+					<span class='st_facebook_vcount' displayText='Facebook'></span>
+					<span class='st_twitter_vcount' displayText='Tweet'></span>
+					<span class='st_pinterest_vcount' displayText='Pinterest'></span>
+					<span class='st_googleplus_vcount' displayText='Google +'></span>
+					<span class='st_email_vcount' displayText='Email'></span>
 					
 				</div>
 						
