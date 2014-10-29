@@ -126,6 +126,11 @@ class EvntController extends Controller {
 		 return $this->event->expireEvent();
 	}
 
+	/**
+	 * Event Category
+	 * @param  [type] $slug
+	 * @return [type]
+	 */
 	public function category($slug)
 	{
 		//toda find Paginate

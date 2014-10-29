@@ -9,7 +9,6 @@
 
 <section>
 
-@include('partials.newsletter')
 </section>
  
 <section class="content eventListing">

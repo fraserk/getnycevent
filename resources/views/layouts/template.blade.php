@@ -5,7 +5,7 @@
 
             <title>GetNYCevents - @yield('title','Whats happening this weekend?')</title>
             <meta name = "description" content="@yield('description', 'Get NYC Events, get infomation about local events in New York.  Find out whats happen this weekend.')"> 
-        <link href="http://fonts.googleapis.com/css?family=Josefin+Sans|Montserrat|Josefin+Sans|Medula+One|Open+Sans|Roboto"rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Josefin+Sans|Montserrat|Josefin+Sans|Medula+One|Open+Sans|Roboto|Francois+One"rel="stylesheet" type="text/css">
         {!!HTML::style('/assets/style/normalize.css')!!}
         {!!HTML::style('/assets/style/foundation.css')!!}
         {!!HTML::style('/assets/style/jquery.datetimepicker.css')!!}
@@ -74,6 +74,8 @@
                   <li><a href="https://plus.google.com/108209078557449361832" rel="publisher">Visit us on Google+</a></li>
                </ul>
             </div>
+            
+
         </div>
 
     </section>

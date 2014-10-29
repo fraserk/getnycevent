@@ -8103,16 +8103,16 @@ p {
 /* line 36, ../scss/foundation/_mystyle.scss */
 .hero {
   margin-bottom: 10px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  background: #dddddd url("../images/skulls.png");
+  background: #dddddd url("../images/imgBg.jpg");
   color: #fff;
+  height: 350px;
+  padding-top: 30px;
 }
-/* line 45, ../scss/foundation/_mystyle.scss */
+/* line 44, ../scss/foundation/_mystyle.scss */
 .hero h2 {
-  font-family: 'Josefin Sans', sans-serif;
-  color: #000;
+  font-family: 'Francois One', sans-serif;
+  color: #fff;
+  font-size: 2.9em;
 }
 /* line 49, ../scss/foundation/_mystyle.scss */
 .hero h3 {
