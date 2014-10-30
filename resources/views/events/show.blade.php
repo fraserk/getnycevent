@@ -10,21 +10,21 @@
 
 		<section class="content">
 
-			<div class="row detailBG">
+			<div class="row">
 				<!-- left column -->
 				<div class="large-6 medium-5 columns">
+					<div class="custom_head_panel">
+						<h4>EVENT DETAIL</h4>
+					</div>
+					<div class="panel callout">
+
 					<h3><strong>{{$data->name}}</strong></h3>
 				
 					<p>{!! nl2br($data->detail)!!}</p>
 					
-					<hr />
-					<span class='st_facebook_vcount' displayText='Facebook'></span>
-					<span class='st_twitter_vcount' displayText='Tweet'></span>
-					<span class='st_pinterest_vcount' displayText='Pinterest'></span>
-					<span class='st_googleplus_vcount' displayText='Google +'></span>
-					<span class='st_email_vcount' displayText='Email'></span>
 					
 				</div>
+			</div>
 						
 					
 				<!-- Right column -->
@@ -33,8 +33,11 @@
 					<div class="row">
 						
 						<div class="small-12 columns">
-
-							<h3><strong>LOCATION INFO</strong></h3>
+							<div class="custom_head_panel">
+								<h4>EVENT LOCATION</h4>
+							</div>
+						<div class="panel callout">
+							
 						
 							<address>
 								{{$data->venue->venueName}} <br />
@@ -42,34 +45,50 @@
 								{{$data->venue->city}}, {{$data->venue->state}} {{$data->venue->zip}}<br />
 							</address>
 						</div>
+						</div>
 					</div>
 
 					<div class="row">
 						<div class="small-12 columns">
-							<h3><strong>HOURS</strong></h3>
+							<div class="custom_head_panel">
+								<h4>WHEN?</h4>
+							</div>
+						<div class="panel callout">
 							<p class="highlight">{{$data->when->format('D M d')}} ({{$data->when->diffForHumans()}})<br />
 							FROM: {{$data->when->format('h:i A')}}<br />
 							TO:	{{$data->end->format('h:i A')}}
 							<p/>
 						</div>
 					</div>
+					</div>
 
 						<div class="row">
 						<div class="small-12 columns">
-							<h3><strong>COVER</strong></h3>
+							<div class="custom_head_panel">
+								<h4>COVER</h4>
+							</div>
+						<div class="panel callout">
 						
 								<p class="highlight">{{$data->cover ? $data->cover : 'N/A'}}</p>
 						</div>
 					</div>
+					</div>
 						<div class="row">
 						<div class="small-12 columns">
-							<h3><strong>TIX/MORE INFO</strong></h3>
+							<div class="custom_head_panel">
+								<h4>MORE INFO</h4>
+							</div>
+						<div class="panel callout">
 								<p class="highlight">@if($data->info) <a href="{!!$data->info!!}">WEBSITE</a> @else NA @endif</p>
 					</div>
 				</div>
+				</div>
 					<div class="row">
 						<div class="small-12 columns">
-							<h3><strong>FLYER/PHOTO</strong></h3>
+							<div class="custom_head_panel">
+								<h4>FLYER/PHOTO</h4>
+							</div>
+						<div class="panel callout">
 							
 							  @if($data->flyer)     
                         <img src="{{Cloudy::show($data->flyer, array('width' => 550, 'height' => 450, 'crop' => 'fill', 'radius' => 0))}}"> 
@@ -81,6 +100,32 @@
 							
 						</div>
 					</div>
+					</div>
+
+						<div class="row">
+						<div class="small-12 columns">
+							<div class="custom_head_panel">
+								<h4>SHARE EVENT</h4>
+							</div>
+						<div class="panel callout">
+							<!-- twitter share -->
+						<ul class="inline-list">
+							
+							<li>
+							<a href="https://twitter.com/share" class="twitter-share-button" data-via="getnycevent">Tweet</a>					</li>
+                    
+							<!-- Google plus share -->
+							<li>
+								<div class="g-plusone" data-size="medium" rel="canonical"></div>
+							</li>
+							<li>
+								<div class="fb-like" data-href="" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+
+							</li>	
+							</ul>
+						</div>
+					</div>
+					</div>
 
 					<!-- end of nested columns -->
 				</div>
@@ -91,7 +136,16 @@
 	@stop
 
 	@section('scripts')
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "d719c163-162f-4fa2-88a6-af5fa49d0147", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> 
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 @stop
