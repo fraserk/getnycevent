@@ -28,7 +28,7 @@ class EvntController extends Controller {
 
 	{
 		
-		$categories = Category::orderBy('categoryName','asc')->get();
+		$categories = Category::orderBy('categoryName','asc')->take('9')->get();
 		$data = $this->event->getActiveEvents();
 		return view('events.index',compact('data','categories'));
 	}
