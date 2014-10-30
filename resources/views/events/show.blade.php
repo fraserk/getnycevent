@@ -55,8 +55,8 @@
 							</div>
 						<div class="panel callout">
 							<p class="highlight">{{$data->when->format('D M d')}} ({{$data->when->diffForHumans()}})<br />
-							FROM: {{$data->when->format('h:i A')}}<br />
-							TO:	{{$data->end->format('h:i A')}}
+							FROM: {{$data->when->format(' D h:i A')}}<br />
+							TO:	 {{$data->end->format(' D h:i A')}}
 							<p/>
 						</div>
 					</div>
@@ -119,7 +119,7 @@
 								<div class="g-plusone" data-size="medium" rel="canonical"></div>
 							</li>
 							<li>
-								<div class="fb-like" data-href="" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+								<div class="fb-like" data-href="" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
 
 							</li>	
 							</ul>
