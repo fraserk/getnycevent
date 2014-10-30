@@ -12,7 +12,7 @@
 
 			<div class="row">
 				<!-- left column -->
-				<div class="large-6 medium-5 columns">
+				<div class="large-7 medium-5 columns">
 					<div class="custom_head_panel">
 						<h4>EVENT DETAIL</h4>
 					</div>

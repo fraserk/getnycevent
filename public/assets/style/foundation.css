@@ -8301,3 +8301,8 @@ address {
 input[type="search"] {
   height: 2.0em;
 }
+
+/* line 213, ../scss/foundation/_mystyle.scss */
+.contain-to-grid {
+  border-bottom: 1px solid #ddd;
+}
