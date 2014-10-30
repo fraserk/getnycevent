@@ -8103,118 +8103,119 @@ p {
 /* line 36, ../scss/foundation/_mystyle.scss */
 .hero {
   margin-bottom: 10px;
-  background: #dddddd url("../images/imgBg.jpg");
+  background: #dddddd url("../images/imgBg.jpg") no-repeat;
   color: #fff;
   height: 350px;
   padding-top: 30px;
+  background-position: center;
 }
-/* line 44, ../scss/foundation/_mystyle.scss */
+/* line 45, ../scss/foundation/_mystyle.scss */
 .hero h2 {
   font-family: 'Francois One', sans-serif;
   color: #fff;
   font-size: 2.9em;
 }
-/* line 49, ../scss/foundation/_mystyle.scss */
+/* line 50, ../scss/foundation/_mystyle.scss */
 .hero h3 {
   background: rgba(2, 32, 255, 0.5);
   color: #fff;
 }
 
-/* line 54, ../scss/foundation/_mystyle.scss */
+/* line 55, ../scss/foundation/_mystyle.scss */
 .eventcontent {
   background: #fff;
   padding-left: 15px;
 }
-/* line 58, ../scss/foundation/_mystyle.scss */
+/* line 59, ../scss/foundation/_mystyle.scss */
 .eventcontent h5 {
   font-family: 'Open Sans', sans-serif;
 }
-/* line 62, ../scss/foundation/_mystyle.scss */
+/* line 63, ../scss/foundation/_mystyle.scss */
 .eventcontent a {
   color: #000;
   font-size: 1.7em;
 }
-/* line 66, ../scss/foundation/_mystyle.scss */
+/* line 67, ../scss/foundation/_mystyle.scss */
 .eventcontent a:hover {
   color: #A23333;
 }
 
-/* line 72, ../scss/foundation/_mystyle.scss */
+/* line 73, ../scss/foundation/_mystyle.scss */
 h3 {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-/* line 75, ../scss/foundation/_mystyle.scss */
+/* line 76, ../scss/foundation/_mystyle.scss */
 .border {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   background: #fff;
   -moz-box-sizing: border-box;
 }
 
-/* line 86, ../scss/foundation/_mystyle.scss */
+/* line 87, ../scss/foundation/_mystyle.scss */
 .eventListing .row {
   margin-bottom: 10px;
 }
-/* line 89, ../scss/foundation/_mystyle.scss */
+/* line 90, ../scss/foundation/_mystyle.scss */
 .eventListing img {
   height: 184px;
 }
 
-/* line 93, ../scss/foundation/_mystyle.scss */
+/* line 94, ../scss/foundation/_mystyle.scss */
 .title {
   background: #fff;
   padding-right: 10px;
   margin: 0 auto;
 }
 
-/* line 98, ../scss/foundation/_mystyle.scss */
+/* line 99, ../scss/foundation/_mystyle.scss */
 .poster {
   padding: 0;
 }
 
-/* line 101, ../scss/foundation/_mystyle.scss */
+/* line 102, ../scss/foundation/_mystyle.scss */
 .eventDate {
   background-color: #fff;
   padding: 0px;
 }
-/* line 105, ../scss/foundation/_mystyle.scss */
+/* line 106, ../scss/foundation/_mystyle.scss */
 .eventDate .day {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 4.0em;
 }
-/* line 109, ../scss/foundation/_mystyle.scss */
+/* line 110, ../scss/foundation/_mystyle.scss */
 .eventDate .month {
   font-family: 'Montserrat', sans-serif;
   font-size: 4.0em;
 }
-/* line 113, ../scss/foundation/_mystyle.scss */
+/* line 114, ../scss/foundation/_mystyle.scss */
 .eventDate ul {
   margin-bottom: 0;
 }
 
-/* line 117, ../scss/foundation/_mystyle.scss */
+/* line 118, ../scss/foundation/_mystyle.scss */
 .footer {
   background: #000;
   margin: 40px 0 0;
   padding-top: 20px;
 }
 
-/* line 122, ../scss/foundation/_mystyle.scss */
+/* line 123, ../scss/foundation/_mystyle.scss */
 .mylabel {
   font-family: sans-serif;
   font-weight: 200;
 }
 
-/* line 126, ../scss/foundation/_mystyle.scss */
+/* line 127, ../scss/foundation/_mystyle.scss */
 .detail {
   margin-top: 40px;
 }
-/* line 129, ../scss/foundation/_mystyle.scss */
+/* line 130, ../scss/foundation/_mystyle.scss */
 .detail .callout {
   background: #fff;
 }
 
-/* line 133, ../scss/foundation/_mystyle.scss */
+/* line 134, ../scss/foundation/_mystyle.scss */
 .panel.callout {
   background: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -8224,7 +8225,7 @@ h3 {
   border-left: solid 1px #ddd;
 }
 
-/* line 144, ../scss/foundation/_mystyle.scss */
+/* line 145, ../scss/foundation/_mystyle.scss */
 .custom_head_panel {
   border-style: solid;
   border-width: 1px;
@@ -8237,7 +8238,7 @@ h3 {
   -moz-box-sizing: border-box;
 }
 
-/* line 160, ../scss/foundation/_mystyle.scss */
+/* line 161, ../scss/foundation/_mystyle.scss */
 .upcomming {
   padding-top: 15px;
   background-color: #fff;
@@ -8247,7 +8248,7 @@ h3 {
   border-radius: 5px;
 }
 
-/* line 171, ../scss/foundation/_mystyle.scss */
+/* line 172, ../scss/foundation/_mystyle.scss */
 h4 {
   font-size: 1.4em;
   margin: 0;
@@ -8256,18 +8257,18 @@ h4 {
   color: #656C70 !important;
 }
 
-/* line 178, ../scss/foundation/_mystyle.scss */
+/* line 179, ../scss/foundation/_mystyle.scss */
 .eventheader {
   background: #f5f5f5;
   border-bottom: 1px solid #ddd;
 }
 
-/* line 183, ../scss/foundation/_mystyle.scss */
+/* line 184, ../scss/foundation/_mystyle.scss */
 .top-bar .toggle-topbar.menu-icon a {
   color: #fff;
 }
 
-/* line 187, ../scss/foundation/_mystyle.scss */
+/* line 188, ../scss/foundation/_mystyle.scss */
 .address {
   padding-top: 10px;
   font-family: 'Montserrat', sans-serif;
@@ -8275,34 +8276,34 @@ h4 {
   border-top: 1px solid #000;
 }
 
-/* line 195, ../scss/foundation/_mystyle.scss */
+/* line 196, ../scss/foundation/_mystyle.scss */
 .large {
   color: #fff;
   font-size: 4.10em;
 }
 
-/* line 199, ../scss/foundation/_mystyle.scss */
+/* line 200, ../scss/foundation/_mystyle.scss */
 .detailBG {
   background: #fff;
   padding-bottom: 15px;
 }
 
-/* line 203, ../scss/foundation/_mystyle.scss */
+/* line 204, ../scss/foundation/_mystyle.scss */
 address {
   color: #d82424;
 }
 
-/* line 206, ../scss/foundation/_mystyle.scss */
+/* line 207, ../scss/foundation/_mystyle.scss */
 .highlight {
   color: #d82424;
 }
 
-/* line 210, ../scss/foundation/_mystyle.scss */
+/* line 211, ../scss/foundation/_mystyle.scss */
 input[type="search"] {
   height: 2.0em;
 }
 
-/* line 213, ../scss/foundation/_mystyle.scss */
+/* line 214, ../scss/foundation/_mystyle.scss */
 .contain-to-grid {
   border-bottom: 1px solid #ddd;
 }

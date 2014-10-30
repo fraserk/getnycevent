@@ -36,10 +36,11 @@ p{
 .hero{
     
     margin-bottom: 10px;
-     background: #ddd url('../images/imgBg.jpg');
+     background: #ddd url('../images/imgBg.jpg') no-repeat;
      color: #fff;
      height: 350px;
      padding-top: 30px;
+     background-position: center;
   
     h2{
         font-family: 'Francois One', sans-serif;
